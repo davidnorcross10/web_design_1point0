@@ -27,45 +27,23 @@
           </div>
         </div>
       </div>
-      <div id="hover_id" style="background-color:blue;margin-top:40px;font-size:150%;text-align:center">
-        <h>hover</h>
-      </div>
+    </div>
+    <div class="pos_display" id="hover_id" style="background-color:blue;margin-top:40px;font-size:150%;text-align:center">
+      <h>hover</h>
     </div>
   </body>
   <script>
-    function mousePos(element){
-      var elLeft = $(element).offset().left;
-      var elTop = $(element).offset().top;
-      var elRight = parseInt($(element).css("width").slice(0,-2)) + elLeft;
-      var elBottom = parseInt($(element).css("height").slice(0,-2)) + elTop;
-      if(event.clientX>=elLeft && event.clientX<=elRight && event.clientY>=elTop && event.clientY<=elBottom){
-        var mouseInside = true;
-      }else{
-        var mouseInside = false;
-      }
-      return mouseInside;
-    };
     $(function(){
-      $("button").on({
-        mouseover:function(){
-          $(event.currentTarget).siblings("div").slideDown(200);
-          $(event.currentTarget).animate({
+      $(".dropdown").on({
+        mouseenter:function(){
+          $(event.currentTarget).children("div").slideDown(200);
+          $(event.currentTarget).children("button").animate({
             color:"rgb(255,85,0)"
           },300);
         },
         mouseleave:function(){
-          if(!mousePos($(event.currentTarget).siblings("div"))){
-            $(event.currentTarget).siblings("div").slideUp(200);
-            $(event.currentTarget).animate({
-              color:"black"
-            },300);
-          }
-        }
-      });
-      $(".dropdown-content").mouseleave(function(){
-        if(!mousePos($(event.currentTarget).parent())){
-          $(event.currentTarget).slideUp(200);
-          $(event.currentTarget).siblings().animate({
+          $(event.currentTarget).children("div").slideUp(200);
+          $(event.currentTarget).children("button").animate({
             color:"black"
           },300);
         }
