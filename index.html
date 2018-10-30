@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <title>css testing</title>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script src="/home/david/Downloads/jquery-ui-1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="header">
+      <div id="first_half">some text</div>
+      <div id="second_half">some more text</div>
+      <div class="navbar">
+        <div class="dropdown">
+          <button class="dropbtn" id="button1">Dropdown1</button>
+          <div id="dropdown1" class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" id="button2">Dropdown2</button>
+          <div id="dropdown2" class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div>
+      </div>
+      <div id="hover_id" style="background-color:blue;margin-top:40px;font-size:150%;text-align:center">
+        <h>hover</h>
+      </div>
+    </div>
+  </body>
+  <script>
+    function mousePos(element){
+      var elLeft = $(element).offset().left;
+      var elTop = $(element).offset().top;
+      var elRight = parseInt($(element).css("width").slice(0,-2)) + elLeft;
+      var elBottom = parseInt($(element).css("height").slice(0,-2)) + elTop;
+      if(event.clientX>=elLeft && event.clientX<=elRight && event.clientY>=elTop && event.clientY<=elBottom){
+        var mouseInside = true;
+      }else{
+        var mouseInside = false;
+      }
+      return mouseInside;
+    };
+    $(function(){
+      $("button").on({
+        mouseover:function(){
+          $(event.currentTarget).siblings("div").slideDown(200);
+          $(event.currentTarget).animate({
+            color:"rgb(255,85,0)"
+          },300);
+        },
+        mouseleave:function(){
+          if(!mousePos($(event.currentTarget).siblings("div"))){
+            $(event.currentTarget).siblings("div").slideUp(200);
+            $(event.currentTarget).animate({
+              color:"black"
+            },300);
+          }
+        }
+      });
+      $(".dropdown-content").mouseleave(function(){
+        if(!mousePos($(event.currentTarget).parent())){
+          $(event.currentTarget).slideUp(200);
+          $(event.currentTarget).siblings().animate({
+            color:"black"
+          },300);
+        }
+      });
+    });
+  </script>
+</html>
