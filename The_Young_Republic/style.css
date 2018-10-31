@@ -127,8 +127,12 @@ body {
   overflow: auto;
 }
 
-#container {
+.container {
   background-color: white;
+}
+
+.page_title {
+  text-align: center;
 }
 
 #pic-slider-0 {
@@ -147,6 +151,162 @@ img {
   width: 100%;
   height: auto;
 }
+
+/*http://theyoungrepublic.org/wp-content/plugins/wpforms-lite/assets/css/wpforms-full.css?ver=1.3.6*/
+div.wpforms-container-full .wpforms-form .wpforms-field-label {
+	display: block;
+	font-weight: 700;
+	font-size: 16px;
+	float: none;
+	line-height: 1.3;
+	margin: 0 0 4px 0;
+	padding: 0;
+}
+
+/* ******************************************************************* */
+
+/*form fill css*/
+
+/*resets
+-------------------------------------------------------------------*/
+
+div.form-container,
+div.form-container .form-form * {
+  background:none;
+	border:0 none;
+	border-radius:0;
+	-webkit-border-radius:0;
+	-moz-border-radius:0;
+	float:none;
+	font-size:100%;
+	height:auto;
+	letter-spacing:normal;
+	list-style:none;
+	outline:none;
+	position:static;
+	text-decoration:none;
+	text-indent:0;
+	text-shadow:none;
+	text-transform:none;
+	width:auto;
+	visibility:visible;
+	overflow:visible;
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+	-ms-box-shadow:none;
+	-o-box-shadow:none;
+	box-shadow:none;
+}
+
+div.form-container .form-form input,
+div.form-container .form-form label,
+div.form-container .form-form select,
+div.form-container .form-form button,
+div.form-container .form-form textarea {
+  margin:0;
+	border:0;
+	padding:0;
+	display: inline-block;
+	vertical-align: middle;
+	background: none;
+	height: auto;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+div.form-container .forms-field-container  {
+	display: table;
+	width: calc(100% - 160px);
+	float: left;
+}
+
+div.form-container .form-required-label {
+  color: rgb(255,85,0);
+}
+
+div.form-container .form-field {
+	padding: 10px 0;
+	clear: both;
+}
+
+div.form-container .form-field-label {
+	display: block;
+	font-weight: 700;
+	font-size: 16px;
+	float: none;
+	line-height: 1.3;
+	margin: 0 0 4px 0;
+	padding: 0;
+}
+
+/*basic field properties
+----------------------------------------------------------*/
+
+/*field sizes - small*/
+div.form-container .form-form input.form-field-small {
+  max-width: 25%;
+}
+
+div.form-container textarea.form-field-small {
+  height: 70;
+}
+
+/*field sizes - medium*/
+div.form-container .form-form input.form-field-medium {
+  max-width: 60%;
+}
+
+div.form-container textarea.form-field-medium {
+  height: 120px;
+}
+
+/*field sizes - large*/
+div.form-container .form-form input.form-field-large {
+  max-width: 100%;
+}
+
+div.form-container textarea.form-field-large {
+  height: 220;
+}
+
+/*set styles
+-------------------------------------------------------------*/
+div.form-container .form-form input,
+div.form-container .form-form textarea {
+  background-color: #fff;
+	box-sizing: border-box;
+	border-radius: 2px;
+	color: #333;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	display: block;
+	float: none;
+	font-size: 16px;
+	border: 1px solid #ccc;
+	padding: 6px 10px;
+	height: 38px;
+	width: 100%;
+	line-height: 1.3;
+}
+
+div.form-container .form-form input:focus,
+div.form-container .form-form textarea:focus,
+div.form-container .form-form select:focus {
+  border: 1px solid #999;
+}
+
+/*other form settings*/
+div.form-container .form-field-container .form-form input[type=email] {
+  background-color: #fff;
+}
+
+/* ******************************************************************* */
 
 p {
   line-height: 150%;

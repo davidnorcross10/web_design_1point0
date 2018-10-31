@@ -1,69 +1,63 @@
+<!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
     <title>The Young Republic</title>
     <script src="https://code.jquery.com/jquery.min.js"></script>
     <script src="/home/david/Downloads/jquery-ui-1.12.1/jquery-ui.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script>
-      var pic1_url = "http://theyoungrepublic.org/wp-content/uploads/2016/12/footer01-1-1024x525.jpg"
-      var pic2_url = "http://theyoungrepublic.org/wp-content/uploads/2017/12/Picture-2-Inclueurope.png"
+      $(function(){
+        $("#header").load("header.html");
+      });
+      var pic1_url = "http://theyoungrepublic.org/wp-content/uploads/2016/12/footer01-1-1024x525.jpg";
+      var pic2_url = "http://theyoungrepublic.org/wp-content/uploads/2017/12/Picture-2-Inclueurope.png";
     </script>
   </head>
   <body>
-    <div id="container">
+    <div class="container">
       <div id="header">
-        <div class="icon">
-          <h1>The Young Republic</h1>
-        </div>
-        <div class="navbar">
-          <div class="dropdown">
-            <button class="dropbtn" id="button1"><a href="file:///home/david/Documents/web_design/The_Young_Republic/who-we-are-2.html">Who We Are</a></button>
+        <div id="header">
+          <div class="icon">
+            <h1>The Young Republic</h1>
           </div>
-          <div class="dropdown">
-            <button class="dropbtn" id="button1"><a href="file:///home/david/Documents/web_design/The_Young_Republic/what-we-do.html">What We Do</a></button>
-            <div id="dropdown1" class="dropdown-content">
-              <a href="#">Education</a>
-              <a href="#">Research</a>
-              <a href="#">Advocacy</a>
+          <div class="navbar">
+            <div class="dropdown">
+              <button class="dropbtn" id="button1"><a href="file:///home/david/Documents/web_design/The_Young_Republic/who-we-are-2.html">Who We Are</a></button>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn" id="button1"><a href="file:///home/david/Documents/web_design/The_Young_Republic/what-we-do.html">What We Do</a></button>
+              <div id="dropdown1" class="dropdown-content">
+                <a href="#">Education</a>
+                <a href="#">Research</a>
+                <a href="#">Advocacy</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn" id="button1"><a href="file:///home/david/Documents/web_design/The_Young_Republic/news-media.html">News & Media</a></button>
+              <div id="dropdown1" class="dropdown-content">
+                <a href="#">Our News</a>
+                <a href="#">Sign up for our Newsletter</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn" id="button1"><a href="file:///home/david/Documents/web_design/The_Young_Republic/network.html">Network</a></button>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn" id="button1"><a href="file:///home/david/Documents/web_design/The_Young_Republic/get-involved.html">Get Involved</a></button>
+              <div id="dropdown1" class="dropdown-content">
+                <a href="#">Raise Your Voice</a>
+                <a href="#">Join</a>
+                <a href="#">Internship Opportunities</a>
+                <a href="#">Campaign</a>
+                <a href="#">Donate</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button type="button" class="dropbtn" id="button1"><a href="file:///home/david/Documents/web_design/The_Young_Republic/contact-us-2.html">Contact Us</a></button>
             </div>
           </div>
-          <div class="dropdown">
-            <button class="dropbtn" id="button1"><a href="file:///home/david/Documents/web_design/The_Young_Republic/news-media.html">News & Media</a></button>
-            <div id="dropdown1" class="dropdown-content">
-              <a href="#">Our News</a>
-              <a href="#">Sign up for our Newsletter</a>
-            </div>
-          </div>
-          <div class="dropdown">
-            <button class="dropbtn" id="button1"><a href="file:///home/david/Documents/web_design/The_Young_Republic/network.html">Network</a></button>
-          </div>
-          <div class="dropdown">
-            <button class="dropbtn" id="button1"><a href="file:///home/david/Documents/web_design/The_Young_Republic/get-involved.html">Get Involved</a></button>
-            <div id="dropdown1" class="dropdown-content">
-              <a href="#">Raise Your Voice</a>
-              <a href="#">Join</a>
-              <a href="#">Internship Opportunities</a>
-              <a href="#">Campaign</a>
-              <a href="#">Donate</a>
-            </div>
-          </div>
-          <div class="dropdown">
-            <button type="button" class="dropbtn" id="button1"><a href="file:///home/david/Documents/web_design/The_Young_Republic/contact-us-2.html">Contact Us</a></button>
-          </div>
-          <!--
-          <div id="nav">
-            <a href="http://theyoungrepublic.org/who-we-are-2/">News & Media</a>
-          </div>
-          <div id="nav">
-            <a href="http://theyoungrepublic.org/who-we-are-2/">Network</a>
-          </div>
-          <div id="nav">
-            <a href="http://theyoungrepublic.org/who-we-are-2/">Get Involved</a>
-          </div>
-          <div id="nav">
-            <a href="http://theyoungrepublic.org/who-we-are-2/">Contact Us</a>
-          </div>-->
         </div>
       </div>
       <div class="pos_display">
